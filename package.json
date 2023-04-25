@@ -1,0 +1,27 @@
+{
+  "name": "piepiece-cli",
+  "version": "1.0.0",
+  "description": "pie & piece cli",
+  "main": "lib/index.jsx",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "pie-create": "bin/pie/create.js",
+    "piece-create": "bin/piece/create.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shelljs": "^0.8.5",
+    "vue": "^3.2.47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piepieceno/piepiece-cli.git"
+  }
+}
