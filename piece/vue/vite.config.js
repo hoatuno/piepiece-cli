@@ -2,7 +2,7 @@ import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
 import federation from "@originjs/vite-plugin-federation";
 // change port for each remote Piece
-const PORT = 5001;
+const PORT = 5002;
 
 export default defineConfig({
   plugins: [
@@ -11,7 +11,7 @@ export default defineConfig({
       name: "Piece_Vue",
       filename: "remoteEntry.js",
       exposes: {
-        "./remote": "./src/index.js",
+        "./remote": "./src/index.jsx",
       },
     }),
   ],

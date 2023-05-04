@@ -44,20 +44,27 @@ rl.question("Enter the project name: ", (answer) => {
   shell.cd(`${name}`);
   shell.cp("-r", frameworkPath + "/vite.config.js", "vite.config.js");
 
-  // giờ sẽ tạo index.js và sao chép nội dung vào
   switch (framework) {
     case "react": {
       // shell.cat(frameworkPath + "/App.jsx").to("src/App.jsx");
       shell.cat(frameworkPath + "/main.jsx").to("src/main.jsx");
       shell.cat(frameworkPath + "/index.jsx").to("src/index.jsx");
       shell.cat(frameworkPath + "/App.css").to("src/App.css");
+      shell.cat(frameworkPath + "/App.jsx").to("src/App.jsx");
+      shell.cat(frameworkPath + "/main.css").to("src/main.css");
 
       shell.rm("./src/index.css");
       // shell.rm("./src/App.jsx");
       shell.exec("yarn add react-router-dom");
+      break;
     }
     case "vue": {
       shell.cat(frameworkPath + "/index.jsx").to("src/index.jsx");
+      shell.cat(frameworkPath + "/App.vue").to("src/App.vue");
+      shell.cat(frameworkPath + "/main.js").to("src/main.js");
+      shell.cat(frameworkPath + "/index.css").to("src/index.css");
+      shell.cat(frameworkPath + "/style.css").to("src/style.css");
+      break;
     }
   }
   shell.exec(

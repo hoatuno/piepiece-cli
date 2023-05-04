@@ -1,11 +1,19 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 const PieceReact = lazy(() => import("./piece_react"));
+const PieceVue = lazy(() => import("./piece_vue"));
 
 const SuspenseReact = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <PieceReact />
+    </Suspense>
+  );
+};
+const SuspenseVue = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PieceVue />
     </Suspense>
   );
 };
@@ -16,6 +24,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="react" element={<SuspenseReact />} />
+          <Route path="vue" element={<SuspenseVue />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
@@ -35,6 +44,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/react">react</Link>
+          </li>
+          <li>
+            <Link to="/vue">vue</Link>
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "./Home.vue";
-import PieceReact from "./piece_react";
+
 export default () =>
   createRouter({
     history: createWebHistory(),
@@ -8,7 +7,7 @@ export default () =>
       {
         path: "/",
         name: "Home",
-        component: Home,
+        component: () => import("./Home.vue"),
       },
       {
         path: "/about",
@@ -18,7 +17,12 @@ export default () =>
       {
         path: "/react",
         name: "PieceReact",
-        component: PieceReact,
+        component: () => import("./piece_react"),
+      },
+      {
+        path: "/vue",
+        name: "PieceVue",
+        component: () => import("./piece_vue"),
       },
     ],
   });

@@ -1,8 +1,8 @@
-import("piece_react/remote");
+import("piece_vue/remote");
 import { h } from "vue";
 
 export default {
   render() {
-    return h("piece-react");
+    return h("piece-vue");
   },
 };

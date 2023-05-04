@@ -3,7 +3,8 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/react">piece react</router-link>
+      <router-link to="/react">piece react</router-link> |
+      <router-link to="/vue">piece vue</router-link>
     </nav>
     <hr />
     <main>

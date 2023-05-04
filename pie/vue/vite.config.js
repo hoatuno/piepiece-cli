@@ -9,6 +9,7 @@ export default defineConfig({
       name: "app",
       remotes: {
         piece_react: "http://localhost:5001/assets/remoteEntry.js",
+        piece_vue: "http://localhost:5002/assets/remoteEntry.js",
         // add more remote pieces here
       },
     }),
