@@ -7,5 +7,8 @@ declarePiece({
   framework: "vue",
 });
 
-const PieceVue = h("piece-vue");
-export default PieceVue;
+export default {
+  render() {
+    return h("piece-vue");
+  },
+};
